@@ -13,10 +13,10 @@
     
     <item>
       <title>Radon-Nikodymの定理のまとめ</title>
-      <link>https://syuheyk.github.io/200123maesure-RadonNikodym/</link>
+      <link>https://syuheyk.github.io/200123_RadonNikodym/</link>
       <pubDate>Thu, 23 Jan 2020 10:00:00 +0900</pubDate>
       
-      <guid>https://syuheyk.github.io/200123maesure-RadonNikodym/</guid>
+      <guid>https://syuheyk.github.io/200123_RadonNikodym/</guid>
       <description>過去にメモしたRadon-Nikodymの定理の証明まとめ． Capinski and Kopp「Measure, Integral and Probability」を元に記載しました．
 可測空間$(\Omega,\mathcal{F})$上の$F\in\mathcal{F}$に対する測度$\nu(F)$が $$\begin{align} F\mapsto\nu(F)=\int_Ffd\mu \end{align}$$ となるような$f$を見つける問題．
 用語 $\nu$と$\mu$はともに可測空間$(\Omega,\mathcal{F})$上の測度とする．
@@ -39,10 +39,10 @@ $\cup_iF_i=\Omega$をみたす$\mathcal{F}$-可測な集合列$(F_i)_{i\ge0}$が
     
     <item>
       <title>測度論の収束定理</title>
-      <link>https://syuheyk.github.io/200116measure-convergence/</link>
+      <link>https://syuheyk.github.io/200116_convergence/</link>
       <pubDate>Thu, 16 Jan 2020 10:00:00 +0900</pubDate>
       
-      <guid>https://syuheyk.github.io/200116measure-convergence/</guid>
+      <guid>https://syuheyk.github.io/200116_convergence/</guid>
       <description>測度論の収束定理で有名な以下の三定理について，一つが成り立てば他二つも成り立つことを示します． その後，Lebesgueの収束定理を使った計算例を紹介します．
 三定理のステートメント 以下いずれも測度空間$(X,\mathcal{B},\mu)$を所与とする．
 単調収束定理 $0\le f_n\le f_{n+1}\text{ a.e. }(n=1,2,&amp;hellip;), f_n\rightarrow f\text{ a.e. }(n\rightarrow\infty)$である可測関数列$f_n(n=1,2,&amp;hellip;)$と可測関数$f$について $$\begin{align} \lim_{n\rightarrow\infty}\int_Xf_nd\mu=\int_Xfd\mu \end{align}$$ が成り立つ．
