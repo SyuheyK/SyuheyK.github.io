@@ -13,10 +13,10 @@
     
     <item>
       <title>Radon-Nikodymの定理のまとめ</title>
-      <link>https://syuheyk.github.io/posts/200123maesure-RadonNikodym/</link>
+      <link>https://syuheyk.github.io/200123maesure-RadonNikodym/</link>
       <pubDate>Thu, 23 Jan 2020 10:00:00 +0900</pubDate>
       
-      <guid>https://syuheyk.github.io/posts/200123maesure-RadonNikodym/</guid>
+      <guid>https://syuheyk.github.io/200123maesure-RadonNikodym/</guid>
       <description>過去にメモしたRadon-Nikodymの定理の証明まとめ． Capinski and Kopp「Measure, Integral and Probability」を元に記載しました．
 可測空間$(\Omega,\mathcal{F})$上の$F\in\mathcal{F}$に対する測度$\nu(F)$が $$\begin{align} F\mapsto\nu(F)=\int_Ffd\mu \end{align}$$ となるような$f$を見つける問題．
 用語 $\nu$と$\mu$はともに可測空間$(\Omega,\mathcal{F})$上の測度とする．
@@ -39,10 +39,10 @@ $\cup_iF_i=\Omega$をみたす$\mathcal{F}$-可測な集合列$(F_i)_{i\ge0}$が
     
     <item>
       <title>留数定理までの複素関数論を計算で(&#43;特性関数の計算)</title>
-      <link>https://syuheyk.github.io/posts/200115complex1/</link>
+      <link>https://syuheyk.github.io/200115complex1/</link>
       <pubDate>Wed, 15 Jan 2020 10:00:00 +0900</pubDate>
       
-      <guid>https://syuheyk.github.io/posts/200115complex1/</guid>
+      <guid>https://syuheyk.github.io/200115complex1/</guid>
       <description>神保道夫「複素関数入門」を元に， 留数定理に至る複素関数論の内容を計算部分だけピックアップし， 確率論における確率分布(標準正規分布，Gamma分布，Cauchy分布)の特性関数を求めました．
 目次  微分の定義 複素関数の微分とCauchy-Riemannの方程式 Cauchy-Riemannの方程式の簡便な表示 Cauchyの積分定理  Cauchyの積分定理の適用例 Cauchyの積分定理を使った特性関数の計算(確率論)   Cauchyの積分公式 留数定理  
 微分の定義 まず，確認のため実数値関数$u$の$1$変数の微分の定義を改めて書き下す． $u(x)$が点$x_0$で微分可能のとき，高位の微分小をランダウの記号$o$を用いて， $$\begin{align} u(x)=u(x_0)+a(x-x_0)+o(|x-x_0|),\text{ }(x\rightarrow0) \end{align}$$ と表すことができる．ここで$a$は $$\begin{align} \lim_{h\rightarrow0}\frac{u(x_0+h)-u(x_0)}{h}=a \end{align}$$ で定まる微分係数であり，これが$du/dx(x_0)$と表されるものである． 同様に，$2$変数の実数値関数$u(x,y)$が点$(x_0,y_0)$で微分可能のとき， $$\begin{align} u(x,y)=u(x_0,y_0)+a(x-x_0)+b(y-y_0)+o(\sqrt{(x-x_0)^2+(y-y_0)^2}) \end{align}$$ と表せるとき，偏微分係数$a$と$b$をそれぞれ $$\begin{align} a=\frac{\partial u}{\partial x}(x_0,y_0),\text{ }b=\frac{\partial u}{\partial y}(x_0,y_0) \end{align}$$ と表すことができる．

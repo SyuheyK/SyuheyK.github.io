@@ -13,10 +13,10 @@
     
     <item>
       <title>Mecabの使い方のまとめ</title>
-      <link>https://syuheyk.github.io/posts/200127mecab-intro/</link>
+      <link>https://syuheyk.github.io/200127mecab-intro/</link>
       <pubDate>Mon, 27 Jan 2020 10:00:00 +0900</pubDate>
       
-      <guid>https://syuheyk.github.io/posts/200127mecab-intro/</guid>
+      <guid>https://syuheyk.github.io/200127mecab-intro/</guid>
       <description>インストール方法 以下を参照．
 設定ファイルの場所 環境によって異なるので注意．
 https://ichibariki.hatenablog.com/entry/2017/01/09/150542 https://obel.hatenablog.jp/entry/20170218/1487418388

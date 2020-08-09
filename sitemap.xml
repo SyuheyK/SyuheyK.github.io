@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://syuheyk.github.io/posts/</loc>
-    <lastmod>2020-08-01T10:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://syuheyk.github.io/tags/</loc>
     <lastmod>2020-08-01T10:00:00+09:00</lastmod>
   </url>
@@ -23,12 +18,12 @@
   </url>
   
   <url>
-    <loc>https://syuheyk.github.io/posts/200801DiffGeo1/</loc>
+    <loc>https://syuheyk.github.io/200801DiffGeo1/</loc>
     <lastmod>2020-08-01T10:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://syuheyk.github.io/posts/200127mecab-intro/</loc>
+    <loc>https://syuheyk.github.io/200127mecab-intro/</loc>
     <lastmod>2020-01-27T10:00:00+09:00</lastmod>
   </url>
   
@@ -38,7 +33,7 @@
   </url>
   
   <url>
-    <loc>https://syuheyk.github.io/posts/200123maesure-RadonNikodym/</loc>
+    <loc>https://syuheyk.github.io/200123maesure-RadonNikodym/</loc>
     <lastmod>2020-01-23T10:00:00+09:00</lastmod>
   </url>
   
@@ -53,22 +48,12 @@
   </url>
   
   <url>
-    <loc>https://syuheyk.github.io/tags/test/</loc>
+    <loc>https://syuheyk.github.io/200116measure-convergence/</loc>
     <lastmod>2020-01-16T10:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://syuheyk.github.io/posts/200130test/</loc>
-    <lastmod>2020-01-16T10:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://syuheyk.github.io/posts/200116measure-convergence/</loc>
-    <lastmod>2020-01-16T10:00:00+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://syuheyk.github.io/posts/200115complex1/</loc>
+    <loc>https://syuheyk.github.io/200115complex1/</loc>
     <lastmod>2020-01-15T10:00:00+09:00</lastmod>
   </url>
   
@@ -83,23 +68,18 @@
   </url>
   
   <url>
-    <loc>https://syuheyk.github.io/posts/200114mac-setting/</loc>
+    <loc>https://syuheyk.github.io/200114mac-setting/</loc>
     <lastmod>2020-01-14T10:00:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://syuheyk.github.io/posts/200113mathjax-test/</loc>
+    <loc>https://syuheyk.github.io/200113mathjax-test/</loc>
     <lastmod>2020-01-10T18:27:38+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://syuheyk.github.io/tags/TeX/</loc>
     <lastmod>2020-01-10T18:27:38+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://syuheyk.github.io/about/</loc>
-    <lastmod>2020-01-10T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
