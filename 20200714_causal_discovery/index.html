@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+   &ndash; Note置き場
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="統計的因果探索ノート①と統計的因果探索ノート②の続き
+概要 因果推論勉強会での統計的因果探索の内容をまとめます．この記事は4章のLiNGAM(Linear Non-Gaussian Asyclic Model)の回帰分析と独立性評価を使った推定方法を書きます．内容は以下のとおりです．
+ LiNGAMの構造方程式の復習 アイデアの説明 因果的順序による並べ替えと係数行列の関係 独立成分分析を使った因果的順序によって並べ替えたLiNGAMの推定  |">
+    
+
+    <meta name="apple-mobile-web-app-title" content="Note置き場">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://syuheyk.github.io">
+    Note置き場
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+    
+    
+    <a class="UnderlineNav-item " href="/tags/">
+      
+      <span>Tags</span>
+    </a>
+    
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1"></div>
+  </div>
+  <div class="Subhead-description">
+    
+
+
+
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 0001-01-01. Published at: 0001-01-01.">
+        
+          Published: 0001-01-01
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom">
+    <p><a href="https://plaid.esa.io/posts/10861">統計的因果探索ノート①</a>と<a href="https://plaid.esa.io/posts/10996">統計的因果探索ノート②</a>の続き</p>
+<h2 id="概要">概要</h2>
+<p>因果推論勉強会での<a href="https://www.kspub.co.jp/book/detail/1529250.html">統計的因果探索</a>の内容をまとめます．この記事は4章のLiNGAM(<strong>Li</strong>near <strong>N</strong>on-<strong>G</strong>aussian <strong>A</strong>syclic <strong>M</strong>odel)の回帰分析と独立性評価を使った推定方法を書きます．内容は以下のとおりです．</p>
+<ol>
+<li>LiNGAMの構造方程式の復習</li>
+<li>アイデアの説明</li>
+<li>因果的順序による並べ替えと係数行列の関係</li>
+<li>独立成分分析を使った因果的順序によって並べ替えたLiNGAMの推定</li>
+</ol>
+
+  </section>
+
+  <section>
+    
+      
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b></b><nav id="TableOfContents">
+  <ul>
+    <li><a href="#概要">概要</a></li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+         
+<footer id="footer" class="mt-auto text-center text-muted">
+  <div class="container">
+    
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+</footer>
+
+
+
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+    
+  </body>
+</html>

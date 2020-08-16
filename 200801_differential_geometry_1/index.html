@@ -8,14 +8,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
       
-  微分幾何のまとめ &ndash; Note置き場
+  微分幾何のまとめ 1 &ndash; Note置き場
 
     </title>
     
     
-    <meta name="description" property="og:description" content="細野忍「微分幾何」を元に， リーマン幾何学に関する内容をダイジェストでまとめます． 細かな設定について確認するというよりは，大まかな流れを簡潔にまとめて簡単に全体像がつかめるような内容にしています．
-可微分多様体と接空間の定義 内容，流れとキーワード
- 可微分多様体の定義 多様体上の関数とその方向微分 方向微分のなす空間としての接空間 接空間に含まれる多様体 $M$ 上の接ベクトルのなすベクトル場 計量の公理と誘導計量，リーマン計量 リーマン計量による曲線の長さの表現 余接空間とテンソル場，特に共変ベクトル場と反変ベクトル場 捩率テンソルと接続，接続係数 共変微分とその適用例 リーマン接続 平行移動と測地線  可微分多様体の定義 全体をとおして，可微分多様体 $M$ を考える． 可微分多様体 $M$ とは， (位相)多様体 $M$ について， $U_\alpha\cap U_\beta\neq\phi$ をみたす任意の$2$つの局所座標近傍 $(U_\alpha,\phi_\alpha)$ と $(U_\beta,\phi_\beta)$ について， 両者の間の座標を移す連続写像: $$\begin{align} \phi_{\beta\alpha}:=\phi_\beta\circ\phi^{-1}_\alpha:\phi_\alpha(U_\alpha\cap U_\beta)\rightarrow\phi_\beta(U_\alpha\cap U_\beta) \end{align}$$ が定められていて，その座標変換関数が具体的に $$\begin{align} u^1_\beta(p)&amp;=u^1_\beta(u^1_\alpha(p),u^2_\alpha(p))=u^1_\beta(u^1_\alpha,u^2_\alpha)(p), \\u^2_\beta(p)&amp;=u^2_\beta(u^1_\alpha(p),u^2_\alpha(p))=u^2_\beta(u^1_\alpha,u^2_\alpha)(p) \end{align}$$ と書かれ，$C^\infty$ 級関数となっているものである．
+    <meta name="description" property="og:description" content="細野忍「微分幾何」を元に， リーマン幾何学に関する内容をダイジェストでまとめます．
+内容  可微分多様体の定義 多様体上の関数と接空間 局所座標近傍間の貼り合わせとベクトル場 リーマン計量 リーマン計量のテンソル場としての特徴づけ  
+可微分多様体の定義 全体をとおして，可微分多様体 $M$ を考える． 可微分多様体 $M$ とは， (位相)多様体 $M$ について， $U_\alpha\cap U_\beta\neq\phi$ をみたす任意の$2$つの局所座標近傍 $(U_\alpha,\phi_\alpha)$ と $(U_\beta,\phi_\beta)$ について， 両者の間の座標を移す連続写像: $$\begin{align} \phi_{\beta\alpha}:=\phi_\beta\circ\phi^{-1}_\alpha:\phi_\alpha(U_\alpha\cap U_\beta)\rightarrow\phi_\beta(U_\alpha\cap U_\beta) \end{align}$$ が定められていて，その座標変換関数が具体的に $$\begin{align} u^1_\beta(p)&amp;=u^1_\beta(u^1_\alpha(p),u^2_\alpha(p))=u^1_\beta(u^1_\alpha,u^2_\alpha)(p), \\u^2_\beta(p)&amp;=u^2_\beta(u^1_\alpha(p),u^2_\alpha(p))=u^2_\beta(u^1_\alpha,u^2_\alpha)(p) \end{align}$$ と書かれ，$C^\infty$ 級関数となっているものである．
+
 多様体上の関数と接空間 Euclid空間 $\mathbb{E}^3$ 内の曲面上の点 $p$ における接平面が$2$ つのベクトルを基底に定められたことと同様に， 可微分多様体上での曲面およびその接平面を考える．そのために
  可微分多様体 $M$ 上の $C^\infty$ 級関数(曲面の方程式に対応) その関数の方向微分(接平面を構成する接ベクトルに対応) に関して考察し，可微分多様体での&amp;quot;接平面(=接空間)&amp;ldquo;を定める．  $M$ 上の関数 $f:M\rightarrow\mathbb{R}$ を考え，これが $C^\infty$ 級関数であることを，任意の局所座標近傍 $(U_\alpha,\phi_\alpha)$ について $$\begin{align} f\circ\phi_\alpha^{-1}:\phi_\alpha(U_\alpha)\rightarrow\mathbb{R} \end{align}$$ が $C^\infty$ 級関数であることと定める． この関数 $f$ を $u^1_\alpha\times u^2_\alpha$ 平面上の二変数関数と捉えると関数 $f$ の偏微分を $$\begin{align} \dfrac{\partial f}{\partial u^i_\alpha}(p):=\dfrac{\partial(f\circ\phi^{-1}_\alpha)(u^1_\alpha,u^2_\alpha)}{\partial u^i_\alpha}(p) \end{align}$$ 各変数$u^1_\alpha,u^2_\alpha$による偏微分の線形結合を用いれば，方向微分を $$\begin{align} \xi^1\dfrac{\partial f}{\partial u^1_\alpha}(p) &#43; \xi^2\dfrac{\partial f}{\partial u^2_\alpha}(p) &amp;=\xi^1\dfrac{\partial(f\circ\phi^{-1}_\alpha)(u^1_\alpha,u^2_\alpha)}{\partial u^1_\alpha}(p) &#43; \xi^2\dfrac{\partial(f\circ\phi^{-1}_\alpha)(u^1_\alpha,u^2_\alpha)}{\partial u^2_\alpha}(p) \end{align}$$ と定めることができるが，さらにこれを $$\begin{align} \xi^1\dfrac{\partial f}{\partial u^1_\alpha}(p) &#43; \xi^2\dfrac{\partial f}{\partial u^2_\alpha}(p) &amp;= \left\{\xi^1\left(\dfrac{\partial}{\partial u^1_\alpha}\right)_p &#43; \xi^2\left(\dfrac{\partial}{\partial u^2_\alpha}\right)_p\right\}f \end{align}$$ と変形し，関数 $f$ に作用する部分を方向微分と捉える． ここで $(\partial/\partial u^i_\alpha)_p$ は点 $p$ における偏微分を表す． この様に定義した方向微分を2つ考え $$\begin{align} \xi_p=\sum_{i=1}^2\xi^i\left(\dfrac{\partial}{\partial u^i_\alpha}\right)_p ,\;\eta_p=\sum_{i=1}^2\eta^i\left(\dfrac{\partial}{\partial u^i_\alpha}\right)_p \end{align}$$ と表し，線形和と定数倍を|">
     
@@ -65,7 +66,7 @@
 
 <div class="Subhead">
   <div class="Subhead-heading">
-    <div class="h1 mt-3 mb-1">微分幾何のまとめ</div>
+    <div class="h1 mt-3 mb-1">微分幾何のまとめ 1</div>
   </div>
   <div class="Subhead-description">
     
@@ -94,24 +95,17 @@
   
   <section class="pb-6 mb-3 border-bottom">
     <p><a href="http://www.asakura.co.jp/books/isbn/978-4-254-11849-0/">細野忍「微分幾何」</a>を元に，
-リーマン幾何学に関する内容をダイジェストでまとめます．
-細かな設定について確認するというよりは，大まかな流れを簡潔にまとめて簡単に全体像がつかめるような内容にしています．</p>
-<h2 id="可微分多様体と接空間の定義">可微分多様体と接空間の定義</h2>
-<p>内容，流れとキーワード</p>
+リーマン幾何学に関する内容をダイジェストでまとめます．</p>
+<h3 id="内容">内容</h3>
 <ul>
-<li>可微分多様体の定義</li>
-<li>多様体上の関数とその方向微分</li>
-<li>方向微分のなす空間としての<strong>接空間</strong></li>
-<li>接空間に含まれる多様体 $M$ 上の接ベクトルのなす<strong>ベクトル場</strong></li>
-<li>計量の公理と誘導計量，<strong>リーマン計量</strong></li>
-<li>リーマン計量による曲線の長さの表現</li>
-<li>余接空間と<strong>テンソル場</strong>，特に共変ベクトル場と反変ベクトル場</li>
-<li>捩率テンソルと<strong>接続</strong>，接続係数</li>
-<li><strong>共変微分</strong>とその適用例</li>
-<li><strong>リーマン接続</strong></li>
-<li>平行移動と測地線</li>
+<li><a href="#001">可微分多様体の定義</a></li>
+<li><a href="#002">多様体上の関数と<strong>接空間</strong></a></li>
+<li><a href="#003">局所座標近傍間の貼り合わせと<strong>ベクトル場</strong></a></li>
+<li><a href="#004"><strong>リーマン計量</strong></a></li>
+<li><a href="#005">リーマン計量の<strong>テンソル場</strong>としての特徴づけ</a></li>
 </ul>
-<h4 id="可微分多様体の定義">可微分多様体の定義</h4>
+<p><a id="markdown-001" name="001"></a></p>
+<h3 id="可微分多様体の定義">可微分多様体の定義</h3>
 <p>全体をとおして，可微分多様体 $M$ を考える．
 可微分多様体 $M$ とは，
 (位相)多様体 $M$ について，
@@ -130,7 +124,8 @@ $U_\alpha\cap U_\beta\neq\phi$ をみたす任意の$2$つの局所座標近傍 
 
 \end{align}$$</div>
 と書かれ，$C^\infty$ 級関数となっているものである．</p>
-<h4 id="多様体上の関数と接空間">多様体上の関数と接空間</h4>
+<p><a id="markdown-002" name="002"></a></p>
+<h3 id="多様体上の関数と接空間">多様体上の関数と接空間</h3>
 <p>Euclid空間 $\mathbb{E}^3$ 内の曲面上の点 $p$ における接平面が$2$ つのベクトルを基底に定められたことと同様に，
 可微分多様体上での曲面およびその接平面を考える．そのために</p>
 <ul>
@@ -184,7 +179,8 @@ $U_\alpha\cap U_\beta\neq\phi$ をみたす任意の$2$つの局所座標近傍 
 この様に作った2つの方向微分$(\partial/\partial u^1_\alpha)_p,(\partial/\partial u^2_\alpha)_p$は一次独立であることを示すことができるので(例題 2.7)，
 方向微分全体が作るベクトル空間の次元は2次元であることがわかる．</p>
 <p>このベクトル空間のことを <strong>接空間</strong> と呼び $T_pM$ と表す．</p>
-<h4 id="局所座標近傍間の貼り合わせとベクトル場">局所座標近傍間の貼り合わせとベクトル場</h4>
+<p><a id="markdown-003" name="003"></a></p>
+<h3 id="局所座標近傍間の貼り合わせとベクトル場">局所座標近傍間の貼り合わせとベクトル場</h3>
 <p>上記のとおり定義された接空間は局所座標近傍によらず定義されていることを示すことができる．
 まず，$(U_\alpha,\phi_\alpha)$ 上で $C^\infty$ 級である関数 $f$ は，
 $U_\alpha\cap U_\beta\neq\phi$ である $\phi_\beta(U_\alpha\cap U_\beta)$ 上で
@@ -233,13 +229,77 @@ $U_\alpha\cap U_\beta\neq\phi$ である $\phi_\beta(U_\alpha\cap U_\beta)$ 上�
 
 \end{align}$$</div>
 と書く．$M$ 上の各点 $p$ に対して $\xi_p$ が決まるので，$\xi$ を<strong>ベクトル場</strong> と呼ぶ．</p>
-<!-- 
-## リーマン計量とテンソル場
+<p><a id="markdown-004" name="004"></a></p>
+<h3 id="リーマン計量">リーマン計量</h3>
+<p>$M$ の各点 $p$ における接空間 $T_pM$ 上の正定値対称二次形式な内積として，任意のベクトル場 $\xi,\eta$ に対して以下の条件をみたす $g(\xi,\eta)$ を考える．</p>
+<ol>
+<li>$g(\xi,\eta) = g(\eta,\xi)$</li>
+<li>$g(a\xi+b\eta,\zeta)=ag(\xi,\zeta)+bg(\eta,\zeta)$</li>
+<li>$\xi\neq0\Rightarrow g(\xi,\xi)&gt;0$</li>
+</ol>
+<p>ただし，$\xi,\eta,\zeta$ は任意のベクトル場，$a,b\in\mathbb{R}$ とする．
+このような性質をもつ $g$ を <strong>計量</strong> と呼ぶ．</p>
+<p>座標近傍を $(U_\alpha,\phi_\alpha)$，$T_pM$ の基底を $(\partial/\partial u_\alpha^1)_p,(\partial/\partial u_\alpha^2)_p$ とするとき，計量を
+<div>$$\begin{align}
+   
+  g^{(\alpha)}_{ij}(p)=g^{(\alpha)}\left(\left(\dfrac{\partial}{\partial u^i_\alpha}\right)_p,\left(\dfrac{\partial}{\partial u^j_\alpha}\right)_p\right)
 
-## 接続と曲率
+\end{align}$$</div>
+と定めると，$T_pM$ 上の正定値内積となる．</p>
+<p>これを $p$ の関数と見たときにすべての座標近傍に対して $C^\infty$ 級となるとき，$g$ を $M$ の $C^\infty$ 級リーマン計量，あるいは単に <strong>リーマン計量</strong> と呼ぶ．またリーマン計量が与えられた可微分多様体のことを <strong>リーマン多様体</strong> と呼ぶ．</p>
+<p>また，$p\in U_\alpha\cap U_\beta(\neq\phi)$ に対して
+<div>$$\begin{align}
+  
+  g_{ij}^{(\alpha)}(p)=\sum_{k,l=1}^2\dfrac{\partial u^k_\beta}{\partial u^i_\alpha}\dfrac{\partial u^l_\beta}{\partial u^j_\alpha}g_{kl}^{(\beta)}
 
-## 平行移動と測地線
--->
+\end{align}$$</div>
+を示すことができる(問2.5)．
+各座標近傍 $(U_\alpha,\phi_\alpha)$ で正定値対称行列 $g_{ij}^{(\alpha)}$ を定め，
+$\left(g_{ij}^{(\alpha)}\right)_{\alpha\in A}$ がこの式にしたがってリーマン計量が $C^\infty$ 級であるという条件が $M$ 全体に張り合っていれば，
+上記内積の公理を満たすリーマン計量 $g$ が得られる．</p>
+<p><a id="markdown-005" name="005"></a></p>
+<h3 id="リーマン計量のテンソル場としての特徴づけ">リーマン計量のテンソル場としての特徴づけ</h3>
+<p>上記で定義したリーマン計量という値をテンソル場として特徴づける．</p>
+<p>接空間 $T_pM$ の自然な基底として，
+<div>$$\begin{align}
+  
+  \left(\dfrac{\partial }{\partial u^1}\right)_p, \left(\dfrac{\partial }{\partial u^2}\right)_p
+
+\end{align}$$</div>
+をとることができる．この基底の双対基底として各 $i,j=1,2$ に対して
+<div>$$\begin{align}
+  
+  (du^i)_p\left(\dfrac{\partial }{\partial u^j}\right)_p=\delta_j^i=
+  \begin{cases}
+      1, & \text{if}\ i=j \\
+      0, & \text{otherwise}
+  \end{cases}
+
+\end{align}$$</div>
+となるように定められた $(du^i)_p$ で生成された $T_pM$ の双対空間は余接空間と呼ばれ，$T^\ast_pM$ と表される．</p>
+<p>$T_pM$ の基底 $(\partial/\partial u^i)_p,i=1,2$ と双対基底 $(du^j)_p,j=1,2$ を用いて，
+$(r,s)$ テンソル $t_p$ を</p>
+<p><div>$$\begin{align}
+  
+  t_p = \sum_{i_1,...,i_r,j_1,...,j_s}t^{i_1,...,i_r}\;_{j_1,...,j_s}(p)\left(\dfrac{\partial}{\partial u^{i_1}}\right)_p\otimes\cdots\otimes\left(\dfrac{\partial}{\partial u^{i_r}}\right)_p\otimes(du^{j_1})_p\otimes\cdots\otimes(du^{j_s})_p
+
+\end{align}$$</div>
+と定める．ただし，$p\in U_\alpha\cap U_\beta(\neq\phi)$ とする．</p>
+<p>点 $p$ が $M$ 全体をわたって動くとき，$t$ を $(r,s)$ テンソル場と呼ぶ．</p>
+<p>リーマン計量は $(0,2)$ テンソル場
+<div>$$\begin{align}
+  
+  ds^2=\sum_{i,j=1}^2g_{ij}du^i\otimes du^j
+
+\end{align}$$</div>
+によって，無限小線分の長さを意味するものとして表すことができる．
+これを簡略して
+<div>$$\begin{align}
+  
+  ds^2=\sum_{i,j=1}^2g_{ij}du^idu^j
+
+\end{align}$$</div>
+とも書くが，意味することは $(0,2)$ テンソル場である．</p>
 <section class="footnotes" role="doc-endnotes">
 <hr>
 <ol>
@@ -265,17 +325,16 @@ $U_\alpha\cap U_\beta\neq\phi$ である $\phi_\beta(U_\alpha\cap U_\beta)$ 上�
           
   
     <div id="toc" class="Box Box--blue mb-3">
-      <b>微分幾何のまとめ</b><nav id="TableOfContents">
+      <b>微分幾何のまとめ 1</b><nav id="TableOfContents">
   <ul>
-    <li><a href="#可微分多様体と接空間の定義">可微分多様体と接空間の定義</a>
+    <li>
       <ul>
-        <li>
-          <ul>
-            <li><a href="#可微分多様体の定義">可微分多様体の定義</a></li>
-            <li><a href="#多様体上の関数と接空間">多様体上の関数と接空間</a></li>
-            <li><a href="#局所座標近傍間の貼り合わせとベクトル場">局所座標近傍間の貼り合わせとベクトル場</a></li>
-          </ul>
-        </li>
+        <li><a href="#内容">内容</a></li>
+        <li><a href="#可微分多様体の定義">可微分多様体の定義</a></li>
+        <li><a href="#多様体上の関数と接空間">多様体上の関数と接空間</a></li>
+        <li><a href="#局所座標近傍間の貼り合わせとベクトル場">局所座標近傍間の貼り合わせとベクトル場</a></li>
+        <li><a href="#リーマン計量">リーマン計量</a></li>
+        <li><a href="#リーマン計量のテンソル場としての特徴づけ">リーマン計量のテンソル場としての特徴づけ</a></li>
       </ul>
     </li>
   </ul>
