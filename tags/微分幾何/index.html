@@ -70,6 +70,42 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/201101_Riemann_geo_crash_course2/">
+        <div class="h2 mt-1 mb-1">リーマン幾何のcrash course</div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+
+
+
+<a href='/tags/%E5%BE%AE%E5%88%86%E5%B9%BE%E4%BD%95' class="muted-link">
+  <span class="Label Label--gray">微分幾何</span>
+</a>
+
+
+      <div class="float-md-right">
+        <span>2020-11-01</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    岡部洋一「リーマン幾何学と相対性理論」の内容を整理しながら，リーマン幾何学に関する内容をダイジェストでまとめます．
+
+平行移動と接続係数 　下図のとおり，平面上の点 $O$ で定義されたベクトル $A(O)$ の点 $P$ への平行移動を考える．
+ ベクトル $A(O)$ の点 $O$ から点 $P$ への平行移動  ベクトル $A(O)$ を点 $P$ 上にコピーし，その曲線座標系への射影を $A_{||}(O\rightarrow P)$ と定め，これをもって このベクトル $A_{||}$ は元の $A$ とは異なり，その差を $A_{\bot}(O\rightarrow P)$ と表すと $$\begin{align} A(O) &= A_{||}(O\rightarrow P) + A_{\bot}(O\rightarrow P) \end{align}$$ という関係式が成り立つ． $A_{||}$ が対象とする曲線座標系の中のベクトルであり，$A_\bot$ がその座標系からはみ出すベクトルである. これに基づいて，その曲線座標系の基底を $\boldsymbol{e}_m$ または $\boldsymbol{e}^m$ としたとき， $$\begin{align} A_\bot(O\rightarrow P)\cdot\boldsymbol{e}_m&=0\\ A_\bot(O\rightarrow P)\cdot\boldsymbol{e}^m&=0 \end{align}$$ がすべての $m$ について成り立っているとき，$A_{||}$ を平行移動されたベクトルと呼ぶこととする． すなわち，平行移動とは元のベクトルをわずかに離れた位置にコピーしたベクトルの射影であると言える． 基底の平行移動 　平行移動した基底と，その場所における基底の関係を式で調べてみよう． 以下では上記の座標系で表す平行移動を考え，基底 $\boldsymbol{e}_m(\boldsymbol{x}+d\boldsymbol{x})$ を　$\boldsymbol{x}+d\boldsymbol{x}$ から $\boldsymbol{x}$ へ平行移動する場合を考える．
+    <a class="muted-link" href="/201101_Riemann_geo_crash_course2/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/200802_differential_geometry_2/">
         <div class="h2 mt-1 mb-1">微分幾何のまとめ 2</div>
       </a>
@@ -94,9 +130,8 @@
     
     細野忍「微分幾何」を元に， リーマン幾何学に関する内容をダイジェストでまとめます．
 内容  共変微分と接続，捩率テンソル リーマン接続  
-共変微分と接続，捩率テンソル 各点で関数の方向微分は独立に考えられるので，それに基づいて定義された接空間も同様に独立である． そこで２点間の接空間の基底の差分を $$\begin{align} \left(\dfrac{\partial}{\partial u^j}\right)_{p+\Delta p} - \left(\dfrac{\partial}{\partial u^j}\right)_p &= \sum_{i,k=1}^2\Delta u^i\Gamma_{i\ j}^{\ k}\left(\dfrac{\partial}{\partial u^k}\right)_p \end{align}$$ と決めることにする． 多様体内の各点によって基底が変化する様子を $C^\infty$ 上の関数 $\Gamma_{i\ j}^{\ k}$ で表現していると捉えることができる．
-この式の右辺各項について，$\Delta u^i\rightarrow0$ としたときの極限を $\nabla_{\partial/\partial u^i}$ と書き， $$\begin{align} \nabla_{\partial/\partial u^i}\left(\dfrac{\partial}{\partial u^j}\right)_p &= \sum_{i,k=1}^2\Gamma_{i\ j}^{\ k}\left(\dfrac{\partial}{\partial u^k}\right)_p \end{align}$$ と定め，$T_{p+\Delta p}M$ と $T_pM$ の基底の関係を表す式と読む．
-また，一般のベクトル場 $\xi_p=\sum_{j=1}^2\xi^j(\partial/\partial u^j)_p$ の2点 $p$ と $p+\Delta p$ の関係を 成分 $\xi^j$ が変化する部分と基底 $(\partial/\partial u^j)_p$ が変化する部分に分けて $$\begin{align} \sum_{j=1}^2\xi^j(p+\Delta p)\left(\dfrac{\partial}{\partial u^j}\right)_{p+\Delta p} - \sum_{j=1}^2\xi^j(p)\left(\dfrac{\partial}{\partial u^j}\right)_{p} &= \sum_{i,j=1}^2\Delta u^i\left(\dfrac{\partial\xi^j}{\partial u^i}+\sum_{k=1}^2\Gamma_{i\ k}^{\; j}\xi^k\right) \left(\dfrac{\partial}{\partial u^j}\right)_p+O((\Delta u)^2) \end{align}$$ と表すことができる． この式の右辺第一項に現れる係数を $$\begin{align} \nabla_{\partial/\partial u^i}\xi^j=\dfrac{\partial\xi^j}{\partial u^i}+\sum_{k=1}^2\Gamma_{i\ k}^{\; j}\xi^k \end{align}$$ と書いて，ベクトル場 $\xi_p$ の成分 $\xi^j$ の共変微分係数あるいは単に共変微分と呼ぶ． $\partial\xi^j/\partial u^i$ が成分が変化する部分に，$\sum_{k=1}^2\Gamma_{i\ k}^{; j}\xi^k$ が基底が変化する部分に対応している． この記号を用いるとベクトル場 $\xi_p$ に対する共変微分は $$\begin{align} \nabla_{\partial/\partial u^i}\xi &=\sum_j\left(\nabla_{\partial/\partial u^i}\xi^j\right)\left(\dfrac{\partial}{\partial u^j}\right) =\left(\dfrac{\partial}{\partial u^i}\right)\xi+\sum_{j,k}\Gamma_{i\ k}^{\; j}\xi^k\left(\dfrac{\partial}{\partial u^j}\right) \end{align}$$ と計算できる．
+共変微分と接続，捩率テンソル $M$ 上の点 $p$ における接空間の基底の方向微分を考えたい． そのために，接空間の基底をインデックス $j$ で，微分したい方向をインデックス $i$ で表し， $M$ 上の2点 $p+\Delta p,p$ の基底の差分を微分したい方向へ分解する． すると，$i$ と $j$ の対応を基底成分の和を取ることで $$\begin{align} \left(\dfrac{\partial}{\partial u^j}\right)_{p+\Delta p} - \left(\dfrac{\partial}{\partial u^j}\right)_p &= \sum_{i,k=1}^2\Delta u^i\Gamma_{i\ j}^{\ k}\left(\dfrac{\partial}{\partial u^k}\right)_p \end{align}$$ と決まることにする． 多様体内の各点によって基底が変化する様子を $C^\infty$ 上の関数 $\Gamma_{i\ j}^{\ k}$ で表現していると捉えることができる．
+各点で関数の方向微分は独立に考えられるので，それに基づいて定義された接空間も同様に独立であるから， $\Delta u^i\rightarrow0$ としたとき，別の座標とは独立に $p+\Delta p$ における量は $p$ へ収束する． このことから，上式の右辺各項について， $\Delta u^i\rightarrow0$ としたときの極限を $\nabla_{\partial/\partial u^i}$ または簡単に $\nabla_i$ と書き， 接空間の基底 $\partial/\partial u^j$ の $\partial/\partial u^i$ 方向への共変微分を $$\begin{align} \nabla_i\left(\dfrac{\partial}{\partial u^j}\right)_p &= \lim_{\Delta u^i\rightarrow0}\dfrac{1}{\Delta u^i}\left\{\sum_{k=1}^2\Delta u^i\Gamma_{i\ j}^{\ k}\left(\dfrac{\partial}{\partial u^k}\right)_p\right\} = \sum_{k=1}^2\Gamma_{i\ j}^{\ k}\left(\dfrac{\partial}{\partial u^k}\right)_p \end{align}$$ と定め，$T_{p+\Delta p}M$ と $T_pM$ の基底の関係を表す式と読む．
     <a class="muted-link" href="/200802_differential_geometry_2/">…</a>
   </div>
 </div>
@@ -174,7 +209,7 @@
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e5%be%ae%e5%88%86%e5%b9%be%e4%bd%95" class="link-gray text-emphasized css-truncate-target"><span class="">微分幾何</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">

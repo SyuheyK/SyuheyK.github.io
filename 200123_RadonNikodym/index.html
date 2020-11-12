@@ -23,9 +23,9 @@
   分割(partition)
 $\mathcal{F}$内の有限な排反部分集合の集まり$\mathcal{P}=(F_i)_{i\le n}$で$\cup_iF_i=\Omega$をみたすものを，(有限可測な)$\Omega$の分割と呼ぶ．
   細分(refinement)
-2つの分割$\mathcal{P},\mathcal{P&amp;rsquo;}$について，任意の$\mathcal{P}$の要素が$\mathcal{P&amp;rsquo;}$の排反な要素の和集合で表されるとき，$\mathcal{P&amp;rsquo;}$は$\mathcal{P}$の細分と呼ぶ．
+2つの分割$\mathcal{P},\mathcal{P&#39;}$について，任意の$\mathcal{P}$の要素が$\mathcal{P&#39;}$の排反な要素の和集合で表されるとき，$\mathcal{P&#39;}$は$\mathcal{P}$の細分と呼ぶ．
   $\sigma$-有限($\sigma$-finite)
-$\cup_iF_i=\Omega$をみたす$\mathcal{F}$-可測な集合列$(F_i)_{i\ge0}$が存在して，各$i$について$\nu(F_i)$が有限の値をとるとき，$\nu$を$\sigma$-有限な測度と呼ぶ．
+$\cup_iF_i=\Omega$をみたす$\mathcal{F}$-可測な集合列$(F_i)_{i\ge0}$が存在して，各$i$について$\nu(F_i)$が有限の値をとるとき，$\nu$を**$\sigma$-有限**な測度と呼ぶ．
   証明 Radon-Nikodymの定理の証明をするときに，以下の補助定理を使うと便利なので，事前に証明しておきます． Radon-Nikodymの定理との違いは
  2つの測度が$\sigma$-有限ではなく，一方がもう片方を押さえているという仮定になっている． 押さえている方の測度$\mu$が全測度で1となる($\mu(\Omega)=1$)． という2点．ただし，結論の形はRadon-Nikodymの定理と同様なのでその雰囲気は掴んでもらえるはず．  補助定理
 任意の$F\in\mathcal{F}$に対して，$\mu(\Omega)=1,0\le\nu(F)\le\mu(F)$が成り立つ，つまり$\mu$は$\nu$を押さえる測度とする． このとき，任意の$F\in\mathcal{F}$に対して， $$\begin{align} \nu(F)=\int_Fhd\mu\tag*{(#1)}\label{eq1} \end{align}$$ をみたす，($\Omega$上の)非負$\mathcal{F}$-可測関数$h$が存在する．
@@ -132,11 +132,11 @@ $\mathcal{F}$内の有限な排反部分集合の集まり$\mathcal{P}=(F_i)_{i\
 </li>
 <li>
 <p><strong>細分(refinement)</strong><br>
-2つの分割$\mathcal{P},\mathcal{P&rsquo;}$について，任意の$\mathcal{P}$の要素が$\mathcal{P&rsquo;}$の排反な要素の和集合で表されるとき，$\mathcal{P&rsquo;}$は$\mathcal{P}$の<strong>細分</strong>と呼ぶ．</p>
+2つの分割$\mathcal{P},\mathcal{P'}$について，任意の$\mathcal{P}$の要素が$\mathcal{P'}$の排反な要素の和集合で表されるとき，$\mathcal{P'}$は$\mathcal{P}$の<strong>細分</strong>と呼ぶ．</p>
 </li>
 <li>
 <p><strong>$\sigma$-有限($\sigma$-finite)</strong><br>
-$\cup_iF_i=\Omega$をみたす$\mathcal{F}$-可測な集合列$(F_i)_{i\ge0}$が存在して，各$i$について$\nu(F_i)$が有限の値をとるとき，$\nu$を<strong>$\sigma$-有限</strong>な測度と呼ぶ．</p>
+$\cup_iF_i=\Omega$をみたす$\mathcal{F}$-可測な集合列$(F_i)_{i\ge0}$が存在して，各$i$について$\nu(F_i)$が有限の値をとるとき，$\nu$を**$\sigma$-有限**な測度と呼ぶ．</p>
 </li>
 </ul>
 <h2 id="証明">証明</h2>
