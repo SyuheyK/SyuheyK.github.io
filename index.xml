@@ -8,13 +8,13 @@
     <language>jp</language>
     <lastBuildDate>Sat, 21 Nov 2020 10:00:00 +0900</lastBuildDate><atom:link href="https://syuheyk.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Jump過程① -Poisson過程と点過程-</title>
+      <title>Jump過程① - Poisson過程と点過程 -</title>
       <link>https://syuheyk.github.io/201121_jump_process_1/</link>
       <pubDate>Sat, 21 Nov 2020 10:00:00 +0900</pubDate>
       
       <guid>https://syuheyk.github.io/201121_jump_process_1/</guid>
       <description>Poisson過程とその性質 $(\tau_i)_{i\ge1}$ をそれぞれがパラメータ $\lambda$ の指数分布に従う独立な確率変数のベクトルとし，$T_n=\sum_i^n\tau_i$とする． 次式で定められる確率過程 $(N_t,t\ge0)$ を，強度 $\lambda$ のPoisson過程と呼ぶ． $$\begin{align} N_t = \sum_{n\ge1}1_{t\ge T_n}(t). \end{align}$$
-Poisson過程の性質  任意の $t&amp;gt;0$ に対して，$N_t$ は確率 $1$ で有限である． 任意のシナリオ $\omega$ に対して，サンプルパス $t\rightarrow N_t(\omega)$ は区分的に定数であり，ジャンプ幅 $1$ で逓増する． サンプルパス $t\rightarrow N_t$ は右連続左極限である． 任意の $t$ に対して確率 $1$ で $N_{t-}=N_t$ である1． $(N_t)$ は確率収束の意味で連続である: $$\begin{align} \forall t0, N_s\underset{s\rightarrow t}{\overset{\mathbb{P}}{\rightarrow}}N_t \end{align}$$ 任意の $t&amp;gt;0$ に対して，$N_t$ はパラメータ$\lambda t$ のPoisson分布にしたがう: $$\begin{align} \forall n\in\mathbb{N}, P(N_t=n)=e^{-\lambda t}\dfrac{(\lambda t)^n}{n!} \end{align}$$ $N_t$ の特性関数は次式となる: $$\begin{align} E[e^{iuN_t}]=\exp\left\{ \lambda t(e^{iu}-1) \right\}, \forall u\in\mathbb{R} \end{align}$$ $(N_t)$ は独立増分をもつ:任意の $t_1&amp;lt; \cdots&amp;lt; t_n$ に対して，$N_{t_n}-N_{t_{n-1}},&amp;hellip;,N_{t_2}-N_{t_1},N_{t_1}$は互いに独立である． $(N_t)$ はMarkov性をもつ: $$\begin{align} \forall ts, E[f(N_t)|N_u,u\le s]=E[f(N_t)|N_s ] \end{align}$$  Poisson過程に関する命題 命題1 $(N_t^1)_ {t\ge0}$が強度 $\lambda_1$，$(N_t^2)_ {t\ge0}$が強度 $\lambda_2$の，互いに独立なPoisson過程であるとき， $(N_t^1+N_t^2)_ {t\ge0}$は強度 $\lambda_1+\lambda_2$のPoisson過程である．</description>
+Poisson過程の性質  任意の $t&amp;gt;0$ に対して，$N_t$ は確率 $1$ で有限である． 任意のシナリオ $\omega$ に対して，サンプルパス $t\rightarrow N_t(\omega)$ は区分的に定数であり，ジャンプ幅 $1$ で逓増する． サンプルパス $t\rightarrow N_t$ は右連続左極限である． 任意の $t$ に対して確率 $1$ で $N_{t-}=N_t$ である1． $(N_t)$ は確率収束の意味で連続である: $$\begin{align} \forall t0, N_s\underset{s\rightarrow t}{\overset{\mathbb{P}}{\rightarrow}}N_t \end{align}$$ 任意の $t&amp;gt;0$ に対して，$N_t$ はパラメータ$\lambda t$ のPoisson分布にしたがう: $$\begin{align} \forall n\in\mathbb{N}, P(N_t=n)=e^{-\lambda t}\dfrac{(\lambda t)^n}{n!} \end{align}$$ $N_t$ の特性関数は次式となる: $$\begin{align} E[e^{iuN_t}]=\exp\left\{ \lambda t(e^{iu}-1) \right\}, \forall u\in\mathbb{R} \end{align}$$ $(N_t)$ は独立増分をもつ:任意の $t_1&amp;lt; \cdots&amp;lt; t_n$ に対して，$N_{t_n}-N_{t_{n-1}},&amp;hellip;,N_{t_2}-N_{t_1},N_{t_1}$は互いに独立である． $(N_t)$ はMarkov性をもつ: $$\begin{align} \forall ts, E[f(N_t)|N_u,u\le s]=E[f(N_t)|N_s ] \end{align}$$  Poisson過程に関する命題 命題1</description>
     </item>
     
     <item>
