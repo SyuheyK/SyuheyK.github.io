@@ -70,8 +70,47 @@
 <div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
   <div class="Subhead mb-2">
     <div class="Subhead-heading">
+      <a href="/210104_central_limit_1/">
+        <div class="h2 mt-1 mb-1">中心極限定理の証明① </div>
+      </a>
+    </div>
+    <div class="Subhead-description">
+      
+
+
+
+
+<a href='/tags/%E7%A2%BA%E7%8E%87%E8%AB%96' class="muted-link">
+  <span class="Label Label--gray">確率論</span>
+</a>
+
+
+      <div class="float-md-right">
+        <span>2021-01-03</span>
+      </div>
+    </div>
+  </div>
+  <div class="text-gray">
+    
+    中心極限定理の証明をまとめます． こちらではLevyの定理を所与として，Lindeberg-Fellerの定理を元に中心極限定理を示す． 本稿はCapinski, Marek, Kopp, Peter E., Measure, Integral and Probability, Springer, 2004を参考に記載する．
+確率変数列 $X_n$ に関する記号を以下のようにする．
+ $m_n=\mathrm{E}(X_n)$ $\sigma^2_n=\mathrm{Var}(X_n)$ $S_n=\sum_{k=1}^nX_k$ $\sigma_n^2=\mathrm{Var}(S_n)$ $T_n=(S_n)-\mathrm{E}(S_n)) / c_n$  Lindeberg-Fellerの定理 確率変数列 $X_n$ が各 $n$ に対して $\mathrm{E}(X_n)&lt;\infty, \mathrm{Var}(X_n)&lt;\infty$ をみたし， ある$\varepsilon&gt;0$ に対して $$\begin{align} \dfrac{1}{c_n}\sum_{k=1}^n\int_{\{x\left||x-m_k|\ge\varepsilon c_n\right.\}}(x-m_k)^2\mathrm{d}P_X(x)\rightarrow 0\text{ as }n\rightarrow\infty\tag*{(C1)}\label{lf_clt_condition1} \end{align}$$ が成り立つとき，$P_{T_n}$ は正規分布に弱収束する．
+ 証明 次の定理が成り立つ前提のもと証明する．
+Levyの定理
+$\varphi_ n$ を測度 $P_n$ の特性関数とする． $\varphi_n\rightarrow\varphi$が成り立ち，$\varphi$ は $0$ 点で連続な関数とすると， $\varphi$ は測度 $P$ の特性関数であり，$P_n$ は $P$ に弱収束する．
+ Levyの定理を使えば， $$\begin{align} \varphi_{T_n}(u)\rightarrow\mathrm{e}^{-\frac{1}{2}u^2}\tag*{($\ast$1)} \end{align}$$ を示せば十分である．これを計算すると $$\begin{align} \varphi_{T_n}(u) &= \mathrm{E}(\mathrm{e}^{-\mathrm{i}uT_n})\\ &= \mathrm{E}(\mathrm{e}^{-\mathrm{i}\frac{u}{c_n}\sum_ {k=1}^nX_k})\\ &= \mathrm{E}\left(\prod_ {k=1}^n\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\ &= \prod_ {k=1}^n\mathrm{E}\left(\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\ &= \prod_ {k=1}^n\varphi_{X_ k}\left(\dfrac{u}{c_ n}\right) \end{align}$$ となる．したがって，示すべき式は $$\begin{align} \log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)\rightarrow -\frac{1}{2}u^2\tag*{($\ast$2)} \end{align}$$ となるが，これを書き換えると $$\begin{align} \left|\log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)+\dfrac{1}{2}u^2\right|\rightarrow0\text{ as }n\rightarrow\infty\tag*{($\ast$3)}\label{lfclt_stateq1} \end{align}$$ となる．
+    <a class="muted-link" href="/210104_central_limit_1/">…</a>
+  </div>
+</div>
+
+  
+    
+    
+<div class="rounded-2 box-shadow-medium px-3 pb-2 pt-2 mb-3">
+  <div class="Subhead mb-2">
+    <div class="Subhead-heading">
       <a href="/201121_jump_process_1/">
-        <div class="h2 mt-1 mb-1">Jump過程① - Poisson過程と点過程 -</div>
+        <div class="h2 mt-1 mb-1">ジャンプ過程① - Poisson過程と点過程 -</div>
       </a>
     </div>
     <div class="Subhead-description">
@@ -184,7 +223,7 @@ Poisson過程の性質  任意の $t&gt;0$ に対して，$N_t$ は確率 $1$ �
     
     <span class="css-truncate no-wrap m-1 pl-1">
       <a href="/tags/%e7%a2%ba%e7%8e%87%e8%ab%96" class="link-gray text-emphasized css-truncate-target"><span class="">確率論</span></a>
-      <span class="text-right Counter">2</span>
+      <span class="text-right Counter">3</span>
     </span>
     
     <span class="css-truncate no-wrap m-1 pl-1">

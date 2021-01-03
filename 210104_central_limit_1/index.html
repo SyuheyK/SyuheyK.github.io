@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>
+      
+  中心極限定理の証明①  &ndash; Note置き場
+
+    </title>
+    
+    
+    <meta name="description" property="og:description" content="中心極限定理の証明をまとめます． こちらではLevyの定理を所与として，Lindeberg-Fellerの定理を元に中心極限定理を示す． 本稿はCapinski, Marek, Kopp, Peter E., Measure, Integral and Probability, Springer, 2004を参考に記載する．
+確率変数列 $X_n$ に関する記号を以下のようにする．
+ $m_n=\mathrm{E}(X_n)$ $\sigma^2_n=\mathrm{Var}(X_n)$ $S_n=\sum_{k=1}^nX_k$ $\sigma_n^2=\mathrm{Var}(S_n)$ $T_n=(S_n)-\mathrm{E}(S_n)) / c_n$  Lindeberg-Fellerの定理 確率変数列 $X_n$ が各 $n$ に対して $\mathrm{E}(X_n)&amp;lt;\infty, \mathrm{Var}(X_n)&amp;lt;\infty$ をみたし， ある$\varepsilon&amp;gt;0$ に対して $$\begin{align} \dfrac{1}{c_n}\sum_{k=1}^n\int_{\{x\left||x-m_k|\ge\varepsilon c_n\right.\}}(x-m_k)^2\mathrm{d}P_X(x)\rightarrow 0\text{ as }n\rightarrow\infty\tag*{(C1)}\label{lf_clt_condition1} \end{align}$$ が成り立つとき，$P_{T_n}$ は正規分布に弱収束する．
+ 証明 次の定理が成り立つ前提のもと証明する．
+Levyの定理
+$\varphi_ n$ を測度 $P_n$ の特性関数とする． $\varphi_n\rightarrow\varphi$が成り立ち，$\varphi$ は $0$ 点で連続な関数とすると， $\varphi$ は測度 $P$ の特性関数であり，$P_n$ は $P$ に弱収束する．
+ Levyの定理を使えば， $$\begin{align} \varphi_{T_n}(u)\rightarrow\mathrm{e}^{-\frac{1}{2}u^2}\tag*{($\ast$1)} \end{align}$$ を示せば十分である．これを計算すると $$\begin{align} \varphi_{T_n}(u) &amp;= \mathrm{E}(\mathrm{e}^{-\mathrm{i}uT_n})\\ &amp;= \mathrm{E}(\mathrm{e}^{-\mathrm{i}\frac{u}{c_n}\sum_ {k=1}^nX_k})\\ &amp;= \mathrm{E}\left(\prod_ {k=1}^n\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\ &amp;= \prod_ {k=1}^n\mathrm{E}\left(\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\ &amp;= \prod_ {k=1}^n\varphi_{X_ k}\left(\dfrac{u}{c_ n}\right) \end{align}$$ となる．したがって，示すべき式は $$\begin{align} \log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)\rightarrow -\frac{1}{2}u^2\tag*{($\ast$2)} \end{align}$$ となるが，これを書き換えると $$\begin{align} \left|\log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)&#43;\dfrac{1}{2}u^2\right|\rightarrow0\text{ as }n\rightarrow\infty\tag*{($\ast$3)}\label{lfclt_stateq1} \end{align}$$ となる．|">
+    
+
+    <meta name="apple-mobile-web-app-title" content="Note置き場">
+    
+    
+    
+    
+
+
+    <link rel="stylesheet" href="/assets/syntax.css">
+    <link rel="stylesheet" href="/assets/primer-build.css">
+    <link rel="stylesheet" href="/assets/style.css">
+  </head>
+
+
+  <body class="bg-gray">
+    <div id="holy" class="container-lg bg-white h-100">
+
+      <div id="header" class="px-1 bg-white">
+        <nav class="UnderlineNav UnderlineNav--right px-2">
+  <a class="UnderlineNav-actions muted-link h2" href="https://syuheyk.github.io">
+    Note置き場
+  </a>
+
+  
+  
+  <div class="UnderlineNav-body">
+    
+    
+    
+    <a class="UnderlineNav-item " href="/tags/">
+      
+      <span>Tags</span>
+    </a>
+    
+    
+  </div>
+  
+</nav>
+
+      </div>
+
+      <div role="main" id="main" class="holy-main markdown-body px-4 bg-white">
+        
+
+<div class="Subhead">
+  <div class="Subhead-heading">
+    <div class="h1 mt-3 mb-1">中心極限定理の証明① </div>
+  </div>
+  <div class="Subhead-description">
+    
+
+
+
+
+<a href='/tags/%E7%A2%BA%E7%8E%87%E8%AB%96' class="muted-link">
+  <span class="Label Label--gray">確率論</span>
+</a>
+
+
+
+    
+    <div class="float-md-right">
+      <span title="Lastmod: 2021-01-03. Published at: 2021-01-03.">
+        
+          Published: 2021-01-03
+        
+      </span>
+    </div>
+    
+  </div>
+</div>
+<article>
+  
+  <section class="pb-6 mb-3 border-bottom">
+    <p>中心極限定理の証明をまとめます．
+こちらでは<a href="https://en.wikipedia.org/wiki/L%C3%A9vy%27s_continuity_theorem">Levyの定理</a>を所与として，<a href="https://en.wikipedia.org/wiki/Lindeberg%27s_condition#Feller's_theorem">Lindeberg-Fellerの定理</a>を元に<a href="https://en.wikipedia.org/wiki/Central_limit_theorem#Classical_CLT">中心極限定理</a>を示す．
+本稿は<a href="https://www.springer.com/jp/book/9781852337810">Capinski, Marek, Kopp, Peter E., Measure, Integral and Probability, Springer, 2004</a>を参考に記載する．</p>
+<p>確率変数列 $X_n$ に関する記号を以下のようにする．</p>
+<ul>
+<li>$m_n=\mathrm{E}(X_n)$</li>
+<li>$\sigma^2_n=\mathrm{Var}(X_n)$</li>
+<li>$S_n=\sum_{k=1}^nX_k$</li>
+<li>$\sigma_n^2=\mathrm{Var}(S_n)$</li>
+<li>$T_n=(S_n)-\mathrm{E}(S_n)) / c_n$</li>
+</ul>
+<h3 id="lindeberg-fellerの定理">Lindeberg-Fellerの定理</h3>
+<p>確率変数列 $X_n$ が各 $n$ に対して $\mathrm{E}(X_n)&lt;\infty, \mathrm{Var}(X_n)&lt;\infty$ をみたし，
+ある$\varepsilon&gt;0$ に対して
+<div>$$\begin{align}
+  
+  \dfrac{1}{c_n}\sum_{k=1}^n\int_{\{x\left||x-m_k|\ge\varepsilon c_n\right.\}}(x-m_k)^2\mathrm{d}P_X(x)\rightarrow 0\text{ as }n\rightarrow\infty\tag*{(C1)}\label{lf_clt_condition1}
+
+\end{align}$$</div>
+が成り立つとき，$P_{T_n}$ は正規分布に弱収束する．</p>
+<hr>
+<h3 id="証明">証明</h3>
+<p>次の定理が成り立つ前提のもと証明する．</p>
+<p><strong>Levyの定理</strong><br>
+$\varphi_ n$ を測度 $P_n$ の特性関数とする．
+$\varphi_n\rightarrow\varphi$が成り立ち，$\varphi$ は $0$ 点で連続な関数とすると，
+$\varphi$ は測度 $P$ の特性関数であり，$P_n$ は $P$ に弱収束する．</p>
+<hr>
+<p>Levyの定理を使えば，
+<div>$$\begin{align}
+  
+  \varphi_{T_n}(u)\rightarrow\mathrm{e}^{-\frac{1}{2}u^2}\tag*{($\ast$1)}
+
+\end{align}$$</div>
+を示せば十分である．これを計算すると
+<div>$$\begin{align}
+  
+  \varphi_{T_n}(u)
+    &= \mathrm{E}(\mathrm{e}^{-\mathrm{i}uT_n})\\
+    &= \mathrm{E}(\mathrm{e}^{-\mathrm{i}\frac{u}{c_n}\sum_ {k=1}^nX_k})\\
+    &= \mathrm{E}\left(\prod_ {k=1}^n\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\
+    &= \prod_ {k=1}^n\mathrm{E}\left(\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\
+    &= \prod_ {k=1}^n\varphi_{X_ k}\left(\dfrac{u}{c_ n}\right)
+
+\end{align}$$</div>
+となる．したがって，示すべき式は
+<div>$$\begin{align}
+  
+  \log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)\rightarrow -\frac{1}{2}u^2\tag*{($\ast$2)}
+
+\end{align}$$</div>
+となるが，これを書き換えると
+<div>$$\begin{align}
+  
+  \left|\log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)+\dfrac{1}{2}u^2\right|\rightarrow0\text{ as }n\rightarrow\infty\tag*{($\ast$3)}\label{lfclt_stateq1}
+
+\end{align}$$</div>
+となる．</p>
+<p>以下，以下の流れで証明する．</p>
+<ul>
+<li>特性関数 $\varphi_ {X_k}(u)$ を書き換える．</li>
+<li>式 $\ref{lfclt_stateq1}$ を書き換える．</li>
+<li>収束性を示す．</li>
+</ul>
+<h4 id="特性関数の書き換え">特性関数の書き換え</h4>
+<p>表記の簡単化のために以下の変数を定義する．
+<div>$$\begin{align}
+  
+  \alpha_{nk}
+    &=\int_ {|x|\ge\varepsilon c_ n}x^2\mathrm{d}P_ {X_ k}(x)\\
+  \beta_{nk}
+    &=\int_ {|x|<\varepsilon c_ n}x^2\mathrm{d}P_ {X_ k}(x)
+
+\end{align}$$</div>
+$\beta_{nk}$ について，積分区間の条件式を二乗することで
+<div>$$\begin{align}
+  
+  \beta_{nk}
+    &=\int_ {|x|<\varepsilon c_ n}x^2\mathrm{d}P_ {X_k}(x)
+    =\int_ {x^2<\varepsilon^2c_ n^2}x^2\mathrm{d}P_ {X_k}(x)
+    \le\int_ {x^2<\varepsilon^2c_ n^2}\varepsilon^2c_ n^2\mathrm{d}P_ {X_k}(x)
+    =\varepsilon^2c_ n^2
+
+\end{align}$$</div>
+と計算でき，$\beta_{nk}\le\varepsilon^2c_ n^2$ がわかる．
+なお，不等式に等号もついているのは ${x^2&lt;\varepsilon^2c_ n^2}$ が零集合の場合を考慮したためである．
+定理の条件式 $\ref{lf_clt_condition1}$ はこの変数を使うと，
+<div>$$\begin{align}
+  
+  \sum_ {k=1}^n\dfrac{1}{c_ n^2}\alpha_ {nk}\rightarrow0\text{ as }n\rightarrow\infty\tag*{(#1)}\label{lf_clt_limit1}
+
+\end{align}$$</div>
+と書き換えることができるが，
+<div>$$\begin{align}
+  
+  \sum_{k=1}^n\left(\alpha_{nk}+\beta_{nk}\right)
+    =\sum_{k=1}^n\int x^2\mathrm{d}P_{X_n}(x)
+    =\sum_{k=1}^n\mathrm{Var}(X_k)
+    =c_n^2
+
+\end{align}$$</div>
+となることから，上式を両辺 $c_n$ で除して
+<div>$$\begin{align}
+  
+  \sum_ {k=1}^n\dfrac{1}{c_ n^2}\beta_ {nk}\rightarrow1\text{ as }n\rightarrow\infty\tag*{(#2)}\label{lf_clt_limit2}
+
+\end{align}$$</div>
+をみたすことがわかる．
+被積分関数の形から，$\alpha_{nk},\beta_{nk}$ はともに正値なので，最後の級数の収束は単調増加である．
+また，これらの式は任意の $\varepsilon&gt;0$ に対してなりたつ．</p>
+<p>これらを使って $\varphi_ {X_k}(u)$ を書き換える．任意の $\varepsilon&gt;0$ に対して
+<div>$$\begin{align}
+  
+  \varphi_ {X_k}(u)
+    &=\int_ {|x|\ge\varepsilon c_n}\mathrm{e}^{\mathrm{i}ux}\mathrm{d}P_ {X_ k}(x)
+    +\int_ {|x|<\varepsilon c_ n}\mathrm{e}^{\mathrm{i}ux}\mathrm{d}P_ {X_ k}(x)
+
+\end{align}$$</div>
+と $\varphi_ {X_k}(u)$ を分解し，右辺第一項と第二項をそれぞれ，複素関数に対するTaylor展開:
+<div>$$\begin{align}
+  
+  \mathrm{e}^{\mathrm{i}y}&=1+\mathrm{i}y+\dfrac{1}{2}\theta_2y^2\text{ for some }\theta_2\text{ with }|\theta_2|<\infty,\\
+  \mathrm{e}^{\mathrm{i}y}&=1+\mathrm{i}y-\dfrac{1}{2}y^2+\dfrac{1}{6}\theta_3|y|^3\text{ for some }\theta_3\text{ with }|\theta_3|<\infty
+
+\end{align}$$</div>
+を用いて書き換えると
+<div>$$\begin{align}
+  
+  \varphi_ {X_k}(u)
+    &=\int_ {|x|\ge\varepsilon c_n}\left(1+\mathrm{i}ux+\dfrac{1}{2}\theta_2u^2x^2\right)\mathrm{d}P_ {X_ k}(x)\\
+    &\quad +\int_ {|x|<\varepsilon c_ n}\left(1+\mathrm{i}ux-\dfrac{1}{2}u^2x^2+\dfrac{1}{6}\theta_3|u|^3|x^3|\right)\mathrm{d}P_ {X_ k}(x)\\
+    &=1+\dfrac{1}{2}u^2\int_ {|x|\ge\varepsilon c_n}\theta_2x^2\mathrm{d}P_ {X_ k}(x)-\dfrac{1}{2}u^2\int_ {|x|<\varepsilon c_ n}x^2\mathrm{d}P_ {X_ k}(x)\\
+    &\quad +\dfrac{1}{6}|u|^3\int_ {|x|<\varepsilon c_ n}\theta_3|x|^3\mathrm{d}P_ {X_ k}(x)\tag*{(#3)}\label{lfclt_cf}
+
+\end{align}$$</div>
+となる．</p>
+<h4 id="式3-を押さえる評価式">式(*3) を押さえる評価式</h4>
+<p>式 $\ref{lfclt_cf}$ の最右辺の各項について検討を進めると，まず第二項については$|\theta_ 2|&lt;1$ より
+<div>$$\begin{align}
+  
+  \left|\int_ {|x|\ge\varepsilon c_n}\theta_ 2x^2\mathrm{d}P_ {X_ k}(x)\right|
+    &\le\int_ {|x|\ge\varepsilon c_n}\left|\theta_ 2x^2\right|\mathrm{d}P_ {X_ k}(x)
+    \le\int_ {|x|\ge\varepsilon c_ n}x^2\mathrm{d}P_ {X_ k}(x)
+
+\end{align}$$</div>
+となることから，$|\theta'_ 2|&lt;1$ をみたす $\theta'_ 2$ が存在して，
+<div>$$\begin{align}
+  
+  \int_ {|x|\ge\varepsilon c_ n}\theta_ 2x^2\mathrm{d}P_ {X_ k}(x)
+  =\theta'_ 2\int_ {|x|\ge\varepsilon c_n}x^2\mathrm{d}P_ {X_ k}(x)
+  =\theta'_ 2\alpha_ {nk}
+
+\end{align}$$</div>
+が得られる．</p>
+<p>同様に式 $\ref{lfclt_cf}$ の最右辺の第三項については$|\theta_3|&lt;1$ より
+<div>$$\begin{align}
+  
+  \left|\int_ {|x|<\varepsilon c_ n}\theta_3|x|^3\mathrm{d}P_ {X_ k}(x)\right|
+    &\le\int_ {|x|<\varepsilon c_ n}\left|\theta_3|x|^3\right|\mathrm{d}P_ {X_ k}(x)
+    \le\int_ {|x|<\varepsilon c_ n}\varepsilon c_ nx^2\mathrm{d}P_ {X_ k}(x)
+
+\end{align}$$</div>
+となることから，$|\theta'_ 3|&lt;1$ をみたす $\theta'_ 3$ が存在して，
+<div>$$\begin{align}
+  
+  \int_ {|x|<\varepsilon c_ n}\theta_3|x|^3\mathrm{d}P_ {X_ k}(x)
+  =\theta'_ 3\int_ {|x|<\varepsilon c_ n}\varepsilon c_ nx^2\mathrm{d}P_ {X_ k}(x)
+  =\theta'_ 3\varepsilon c_ n\beta_{nk}
+
+\end{align}$$</div></p>
+<p>これらを式 $\ref{lfclt_cf}$ に代入すると
+<div>$$\begin{align}
+  
+  \varphi_ {X_k}(u)=1 + \dfrac{1}{2}u^2\theta'_ 2\alpha_ {nk} - \dfrac{1}{2}u^2\beta_{nk} + \dfrac{1}{6}|u|^3\theta'_ 3\varepsilon c_ n\beta_{nk}
+
+\end{align}$$</div>
+となる．
+ここで，$u$ に $u/c_ n$ を代入すると
+<div>$$\begin{align}
+  
+  \varphi_ {X_k}\left(\dfrac{u}{c_ n}\right)=1 + \dfrac{1}{2}\left(\dfrac{u}{c_ n}\right)^2\theta'_ 2\alpha_ {nk} - \dfrac{1}{2}\left(\dfrac{u}{c_ n}\right)^2\beta_{nk} + \dfrac{1}{6}|u|^3\theta'_ 3\varepsilon \dfrac{1}{c_ n^2}\beta_{nk}
+
+\end{align}$$</div>
+となるが，表記の簡単のため，
+<div>$$\begin{align}
+  
+  \gamma_{nk} = \dfrac{1}{2}\left(\dfrac{u}{c_ n}\right)^2\theta'_ 2\alpha_ {nk} - \dfrac{1}{2}\left(\dfrac{u}{c_ n}\right)^2\beta_{nk} + \dfrac{1}{6}|u|^3\theta'_ 3\varepsilon \dfrac{1}{c_ n^2}\beta_{nk}
+
+\end{align}$$</div>
+とおけば，
+<div>$$\begin{align}
+  
+  \varphi_ {X_k}\left(\dfrac{u}{c_ n}\right)=1+\gamma_{nk}
+
+\end{align}$$</div>
+となる．$\gamma_{nk}$ の収束性については $\ref{lf_clt_limit1}$ と $\ref{lf_clt_limit2}$ から
+<div>$$\begin{align}
+  
+  \sum_{k=1}^n\gamma_{nk}\rightarrow- \dfrac{1}{2}\left(\dfrac{u}{c_ n}\right)^2 + \dfrac{1}{6}|u|^3\theta'_ 3\varepsilon \dfrac{1}{c_ n^2}
+
+\end{align}$$</div>
+がなりたつ．</p>
+<p>$\ref{lfclt_stateq1}$ の評価式に話を戻すと，複素関数に対するTaylor展開:
+<div>$$\begin{align}
+  
+  \log(1+z)=z+\theta_1|z|^2\text{ for some }\theta_1\text{ with }|\theta_1|<1
+
+\end{align}$$</div>
+より，
+<div>$$\begin{align}
+  
+  \log\prod_{k=1}^n\varphi_{X_n}\left(\dfrac{u}{c_ n}\right)=\sum_{k=1}^n\log\varphi_{X_n}\left(\dfrac{u}{c_ n}\right)=\sum_{k=1}^n\left(\gamma_{nk}+\theta_1|\gamma_{nk}|^2\right)
+
+\end{align}$$</div>
+となるので，示すべき式は
+<div>$$\begin{align}
+  
+  \left|\log\prod_{k=1}^n\varphi_{X_n}\left(\dfrac{u}{c_ n}\right)+\dfrac{1}{2}u^2\right|
+  =\left|\sum_{k=1}^n\left(\gamma_{nk}+\theta_1|\gamma_{nk}|^2\right)+\dfrac{1}{2}u^2\right|
+  \rightarrow0\text{ as }n\rightarrow\infty\tag*{($\ast$4)}\label{lfclt_stateq2}
+
+\end{align}$$</div>
+となる．</p>
+<h4 id="収束性の証明">収束性の証明</h4>
+<p>任意の$\delta&gt;0$ に対して $u$ を固定すると，$\ref{lfclt_stateq2}$ は
+<div>$$\begin{align}
+  
+  \left|\sum_{k=1}^n\left(\gamma_{nk}+\theta_1|\gamma_{nk}|^2\right)+\dfrac{1}{2}u^2\right|
+  &\le\left|\sum_{k=1}^n\gamma_{nk}+\dfrac{1}{2}u^2-\dfrac{1}{6}|u|^3\theta'_3\varepsilon+\dfrac{1}{6}|u|^3\theta'_3\varepsilon\right|+|\theta_1|\sum_{k=1}^n|\gamma_{nk}|^2\\
+  &\le\left|\sum_{k=1}^n\gamma_{nk}+\dfrac{1}{2}u^2-\dfrac{1}{6}|u|^3\theta'_3\varepsilon\right|+|\theta_1|\sum_{k=1}^n|\gamma_{nk}|^2+\left|u\right|^3\varepsilon\left|\theta'_3\right|
+
+\end{align}$$</div>
+となる．</p>
+<h3 id="中心極限定理">中心極限定理</h3>
+
+  </section>
+
+  <section>
+    
+      
+    
+  </section>
+</article>
+
+      </div>
+
+      <div id="side" class="pr-1 bg-white">
+        <aside class="pr-3">
+          
+  
+    <div id="toc" class="Box Box--blue mb-3">
+      <b>中心極限定理の証明① </b><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#lindeberg-fellerの定理">Lindeberg-Fellerの定理</a></li>
+        <li><a href="#証明">証明</a>
+          <ul>
+            <li><a href="#特性関数の書き換え">特性関数の書き換え</a></li>
+            <li><a href="#式3-を押さえる評価式">式(*3) を押さえる評価式</a></li>
+            <li><a href="#収束性の証明">収束性の証明</a></li>
+          </ul>
+        </li>
+        <li><a href="#中心極限定理">中心極限定理</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+  
+
+  
+    <div>
+      
+    </div>
+  
+
+        </aside>
+      </div>
+
+      <div id="footer" class="pt-2 pb-3 bg-white text-center">
+         
+<footer id="footer" class="mt-auto text-center text-muted">
+  <div class="container">
+    
+  </div>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+</footer>
+
+
+
+
+
+      </div>
+    </div>
+
+    
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({ tex2jax: { inlineMath: [['$','$'], ['\\(','\\)']] } });</script>
+    
+  </body>
+</html>

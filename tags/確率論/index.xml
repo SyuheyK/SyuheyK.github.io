@@ -6,9 +6,24 @@
     <description>Recent content in 確率論 on Note置き場</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>jp</language>
-    <lastBuildDate>Sat, 21 Nov 2020 10:00:00 +0900</lastBuildDate><atom:link href="https://syuheyk.github.io/tags/%E7%A2%BA%E7%8E%87%E8%AB%96/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 03 Jan 2021 10:00:00 +0900</lastBuildDate><atom:link href="https://syuheyk.github.io/tags/%E7%A2%BA%E7%8E%87%E8%AB%96/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Jump過程① - Poisson過程と点過程 -</title>
+      <title>中心極限定理の証明① </title>
+      <link>https://syuheyk.github.io/210104_central_limit_1/</link>
+      <pubDate>Sun, 03 Jan 2021 10:00:00 +0900</pubDate>
+      
+      <guid>https://syuheyk.github.io/210104_central_limit_1/</guid>
+      <description>中心極限定理の証明をまとめます． こちらではLevyの定理を所与として，Lindeberg-Fellerの定理を元に中心極限定理を示す． 本稿はCapinski, Marek, Kopp, Peter E., Measure, Integral and Probability, Springer, 2004を参考に記載する．
+確率変数列 $X_n$ に関する記号を以下のようにする．
+ $m_n=\mathrm{E}(X_n)$ $\sigma^2_n=\mathrm{Var}(X_n)$ $S_n=\sum_{k=1}^nX_k$ $\sigma_n^2=\mathrm{Var}(S_n)$ $T_n=(S_n)-\mathrm{E}(S_n)) / c_n$  Lindeberg-Fellerの定理 確率変数列 $X_n$ が各 $n$ に対して $\mathrm{E}(X_n)&amp;lt;\infty, \mathrm{Var}(X_n)&amp;lt;\infty$ をみたし， ある$\varepsilon&amp;gt;0$ に対して $$\begin{align} \dfrac{1}{c_n}\sum_{k=1}^n\int_{\{x\left||x-m_k|\ge\varepsilon c_n\right.\}}(x-m_k)^2\mathrm{d}P_X(x)\rightarrow 0\text{ as }n\rightarrow\infty\tag*{(C1)}\label{lf_clt_condition1} \end{align}$$ が成り立つとき，$P_{T_n}$ は正規分布に弱収束する．
+ 証明 次の定理が成り立つ前提のもと証明する．
+Levyの定理
+$\varphi_ n$ を測度 $P_n$ の特性関数とする． $\varphi_n\rightarrow\varphi$が成り立ち，$\varphi$ は $0$ 点で連続な関数とすると， $\varphi$ は測度 $P$ の特性関数であり，$P_n$ は $P$ に弱収束する．
+ Levyの定理を使えば， $$\begin{align} \varphi_{T_n}(u)\rightarrow\mathrm{e}^{-\frac{1}{2}u^2}\tag*{($\ast$1)} \end{align}$$ を示せば十分である．これを計算すると $$\begin{align} \varphi_{T_n}(u) &amp;= \mathrm{E}(\mathrm{e}^{-\mathrm{i}uT_n})\\ &amp;= \mathrm{E}(\mathrm{e}^{-\mathrm{i}\frac{u}{c_n}\sum_ {k=1}^nX_k})\\ &amp;= \mathrm{E}\left(\prod_ {k=1}^n\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\ &amp;= \prod_ {k=1}^n\mathrm{E}\left(\mathrm{e}^{-\mathrm{i}\frac{u}{c_ n}X_k}\right)\\ &amp;= \prod_ {k=1}^n\varphi_{X_ k}\left(\dfrac{u}{c_ n}\right) \end{align}$$ となる．したがって，示すべき式は $$\begin{align} \log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)\rightarrow -\frac{1}{2}u^2\tag*{($\ast$2)} \end{align}$$ となるが，これを書き換えると $$\begin{align} \left|\log\prod_{k=1}^n\varphi_{X_k}\left(\dfrac{u}{c_n}\right)+\dfrac{1}{2}u^2\right|\rightarrow0\text{ as }n\rightarrow\infty\tag*{($\ast$3)}\label{lfclt_stateq1} \end{align}$$ となる．</description>
+    </item>
+    
+    <item>
+      <title>ジャンプ過程① - Poisson過程と点過程 -</title>
       <link>https://syuheyk.github.io/201121_jump_process_1/</link>
       <pubDate>Sat, 21 Nov 2020 10:00:00 +0900</pubDate>
       
